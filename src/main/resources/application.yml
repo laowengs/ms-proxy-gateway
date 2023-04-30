@@ -5,10 +5,16 @@ logging:
     name: logs/${spring.cloud.client.ip-address}/${spring.application.name}.log
     path: logs
   level:
-    root: INFO
+    root: info
 spring:
   application:
     name: gateway-proxy #指定服务名称
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
   thymeleaf:
     enabled: true
     cache: false
@@ -28,14 +34,14 @@ eureka:
     fetch-registry: true #指定是否要从注册中心获取服务（注册中心不需要开启）
     register-with-eureka: true #指定是否要注册到注册中心（注册中心不需要开启）
     service-url:
-      defaultZone: http://admin:YIpotfg8Z8TKA29ox@eureka/eureka
+      defaultZone: http://admin:YIpotfg8Z8TKA29ox@127.0.0.1:8002/eureka
     registry-fetch-interval-seconds: 30 #从注册中心获取其他服务信息的间隔时间，默认30
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include:
-#          - '*'
-#  endpoint:
-#    health:
-#      show-details: always
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - '*'
+  endpoint:
+    health:
+      show-details: always
