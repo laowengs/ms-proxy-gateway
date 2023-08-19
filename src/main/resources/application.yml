@@ -4,7 +4,7 @@ spring:
 apollo:
   bootstrap:
     enabled: true
-    namespaces: application,redis
+    namespaces: application,redis,logging
     eagerLoad:
       enabled: true
   meta: http://192.168.3.21:8083
