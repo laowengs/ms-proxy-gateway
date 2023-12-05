@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laowengs.ms.proxy.gateway.mapper.GatewayRoutePredicateMapper">
+
+    <resultMap id="BaseResultMap" type="com.laowengs.ms.proxy.gateway.domain.GatewayRoutePredicate">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="routeId" column="route_id" jdbcType="BIGINT"/>
+            <result property="routeName" column="route_name" jdbcType="VARCHAR"/>
+            <result property="predicateName" column="predicate_name" jdbcType="VARCHAR"/>
+            <result property="predicateType" column="predicate_type" jdbcType="VARCHAR"/>
+            <result property="predicateParam" column="predicate_param" jdbcType="VARCHAR"/>
+            <result property="userCreate" column="user_create" jdbcType="VARCHAR"/>
+            <result property="timeCreate" column="time_create" jdbcType="BIGINT"/>
+            <result property="userUpdate" column="user_update" jdbcType="VARCHAR"/>
+            <result property="timeUpdate" column="time_update" jdbcType="BIGINT"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,route_id,route_name,
+        predicate_name,predicate_type,predicate_param,
+        user_create,time_create,user_update,
+        time_update,is_delete
+    </sql>
+</mapper>

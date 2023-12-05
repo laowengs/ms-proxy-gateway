@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.laowengs.ms.proxy.gateway.mapper.GatewayRouteFilterMapper">
+
+    <resultMap id="BaseResultMap" type="com.laowengs.ms.proxy.gateway.domain.GatewayRouteFilter">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="routeId" column="route_id" jdbcType="BIGINT"/>
+            <result property="routeName" column="route_name" jdbcType="VARCHAR"/>
+            <result property="filterName" column="filter_name" jdbcType="VARCHAR"/>
+            <result property="filterType" column="filter_type" jdbcType="VARCHAR"/>
+            <result property="filterParam" column="filter_param" jdbcType="VARCHAR"/>
+            <result property="filterArg" column="filter_arg" jdbcType="VARCHAR"/>
+            <result property="isGlobal" column="is_global" jdbcType="TINYINT"/>
+            <result property="userCreate" column="user_create" jdbcType="VARCHAR"/>
+            <result property="timeCreate" column="time_create" jdbcType="BIGINT"/>
+            <result property="userUpdate" column="user_update" jdbcType="VARCHAR"/>
+            <result property="timeUpdate" column="time_update" jdbcType="BIGINT"/>
+            <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,route_id,route_name,
+        filter_name,filter_type,filter_param,
+        filter_arg,is_global,user_create,
+        time_create,user_update,time_update,
+        is_delete
+    </sql>
+</mapper>
